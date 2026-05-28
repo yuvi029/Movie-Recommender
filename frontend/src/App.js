@@ -193,7 +193,7 @@ function App() {
                     <div style={{ ...s.barFill, width: `${95 - idx * 7}%` }} />
                   </div>
 
-                  <div style={s.watchBtn}>▶ Watch Now</div>
+                  {/* <div style={s.watchBtn}>▶ Watch Now</div> */}
                 </div>
               </div>
             ))}
