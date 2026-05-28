@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading]         = useState(false);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/movies")
+    axios.get("https://movie-recommender-backend-q93b.onrender.com/movies")
       .then(res => setMovies(res.data.movies))
       .catch(err => console.log(err));
   }, []);
@@ -16,7 +16,7 @@ function App() {
   const recommend = () => {
     if (!selected) return;
     setLoading(true);
-    axios.get(`http://127.0.0.1:8000/recommend?movie=${selected}`)
+    axios.get(`https://movie-recommender-backend-q93b.onrender.com/recommend?movie=${selected}`)
       .then(res => {
         setRecommended(res.data.movies);
         setLoading(false);
